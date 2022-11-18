@@ -1,0 +1,132 @@
+.portfolio {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px;
+    max-width: 305px;
+}
+.portfolio__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    grid-auto-rows: minmax(20px, auto);
+}
+.avatar {
+    margin: auto;
+    z-index: 99;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-size: 75px auto;
+    transform: scale(-1, 1);
+    background-image: url(../../../img/avatar/avatar.jpg);
+}
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition: all;
+    transition-duration: 0.5s;
+}
+.close:hover {
+    transform: rotate(0.5turn);
+}
+.circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #0047FF;
+    border-radius: 100%;
+}
+.circle__stick_1 {
+    width: 2px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.circle__stick_2 {
+    width: 2px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(315deg);
+}
+
+.me {
+    grid-column: 1 / 2;
+    display: flex;
+}
+
+.info {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.info__name {
+    font-size: 24px;
+}
+
+.more {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(20px, auto);
+}
+
+.skills {
+    font-size: 20px;
+    grid-column: 1 / 2;
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    position: relative;
+    max-width: 120px;
+}
+
+li::after {
+    content: url(../../../img/list_item/Polygon.svg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+}
+
+.address {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flag {
+    margin: 6px;
+}
