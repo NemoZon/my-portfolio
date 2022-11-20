@@ -1,3 +1,10 @@
+:root {
+    --level: 1%;
+    --widthSkillBar: 10%;
+    --widthWhiteSkillText: 0%;
+    --opacitySkillText: 0;
+}
+
 .portfolio {
     position: relative;
     width: 100%;
@@ -8,11 +15,12 @@
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 20px;
     max-width: 305px;
+    color: black;
 }
 .portfolio__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
+    gap: 5px;
     grid-auto-rows: minmax(20px, auto);
 }
 .avatar {
@@ -89,26 +97,42 @@
     grid-auto-rows: minmax(20px, auto);
 }
 
-.skills {
+.more__title {
+    font-weight: 500;
+}
+
+.skillList {
     font-size: 20px;
     grid-column: 1 / 2;
     list-style-type: none;
     padding: 0;
 }
 
-li{
+.skill {
+    width: 100%;
+}
+
+.skillTitle{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    cursor: pointer;
     position: relative;
     max-width: 120px;
 }
 
-li::after {
+.skillTitle::after {
+    transition: all;
+    transition-duration: 0.5s;
     content: url(../../../img/list_item/Polygon.svg);
     position: absolute;
-    right: 0;
     top: 0;
-    display: inline-block;
-    width: 9px;
-    height: 9px;
+    right: 0;
+}
+
+.skillTitle_active::after{
+    transform: rotateZ(-30deg);
 }
 
 .address {
@@ -129,4 +153,72 @@ li::after {
 
 .flag {
     margin: 6px;
+}
+
+.skills {
+    pointer-events: none;
+    width: 220px;
+    margin: auto;
+}
+
+.skillBar {
+    margin: 10px 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+    position: relative;
+    width: var(--widthSkillBar);
+    height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.skillBar:first-child {
+    margin-top: 5px;
+}
+
+.skillBar:last-child {
+    margin-bottom: 0;
+}
+
+.skillLevel {
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--level);
+    height: 25px;
+    border-radius: 25px;
+    background-color: #007ACC;
+}
+
+.skillLevel::before {
+    transition: all;
+    transition-duration: 0.5s;
+    content: url(../../../img/icons/vscode-icons_file-type-reactts.svg);
+    position: absolute;
+    left: 10px;
+    opacity: var(--opacitySkillText);
+}
+
+.skillName {
+    transition: opacity;
+    transition-duration: 0.5s;
+    opacity: var(--opacitySkillText);
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.skillName_blue {
+    color: #007ACC;
+}
+
+.skillName_white {
+    width: var(--widthWhiteSkillText);
+    color: #ffffff;
 }
