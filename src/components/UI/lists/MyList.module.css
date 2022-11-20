@@ -1,0 +1,110 @@
+:root {
+    --level: 1%;
+    --widthSkillBar: 10%;
+    --widthWhiteSkillText: 0%;
+    --opacitySkillText: 0;
+}
+
+.skillList {
+    font-size: 20px;
+    grid-column: 1 / 2;
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill {
+    width: 100%;
+}
+
+.skillTitle{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    cursor: pointer;
+    position: relative;
+    max-width: 120px;
+}
+
+.skillTitle::after {
+    transition: all;
+    transition-duration: 0.5s;
+    content: url(../../../img/list_item/Polygon.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.skillTitle_active::after{
+    transform: rotateZ(-30deg);
+}
+
+.skills {
+    pointer-events: none;
+    width: 220px;
+    margin: auto;
+}
+
+.skillBar {
+    margin: 10px 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+    position: relative;
+    width: var(--widthSkillBar);
+    height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.skillBar:first-child {
+    margin-top: 5px;
+}
+
+.skillBar:last-child {
+    margin-bottom: 0;
+}
+
+.skillLevel {
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--level);
+    height: 25px;
+    border-radius: 25px;
+    background-color: #007ACC;
+}
+
+.skillIcon {
+    height: 100%;
+    display: flex;
+    padding: 2px 0;
+    transition: all;
+    transition-duration: 0.5s;
+    position: absolute;
+    left: 10px;
+    opacity: var(--opacitySkillText);
+}
+
+.skillName {
+    transition: opacity;
+    transition-duration: 0.5s;
+    opacity: var(--opacitySkillText);
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.skillName_blue {
+    color: #007ACC;
+}
+
+.skillName_white {
+    width: var(--widthWhiteSkillText);
+    color: #ffffff;
+}
