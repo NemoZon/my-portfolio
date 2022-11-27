@@ -9,7 +9,9 @@
     border-radius: 20px;
     max-width: 305px;
     color: black;
+    min-height: 200px;
 }
+
 .portfolio__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -24,7 +26,7 @@
     border-radius: 100%;
     background-size: 75px auto;
     transform: scale(-1, 1);
-    background-image: url(../../../img/avatar/avatar.jpg);
+    background-image: url(../img/avatar/avatar.jpg);
 }
 .close {
     position: absolute;
@@ -40,7 +42,7 @@
     position: relative;
     width: 20px;
     height: 20px;
-    background-color: #0047FF;
+    background-color: #007ACC;
     border-radius: 100%;
 }
 .circle__stick_1 {
@@ -112,4 +114,97 @@
 
 .flag {
     margin: 6px;
+}
+
+.portfolio_close {
+    overflow: hidden;
+    animation: 1s close ease;
+    animation-fill-mode: forwards;
+}
+.display_close{
+    overflow: hidden;
+    animation: 0.5s displayClose ease;
+    animation-fill-mode: forwards;
+}
+.portfolio_open {
+    animation: 1s openAnimation ease-in;
+    animation-fill-mode: forwards;
+}
+.display_open{
+    animation: 1.5s displayOpen ease-in;
+    animation-fill-mode: forwards;
+}
+.arrow {
+    padding: 35px 15px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.arrow__stick_1 {
+    display: block;
+    width: 35px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: #007ACC;
+    transform: translateY(-200%) rotate(-125deg);
+}
+.arrow__stick_2 {
+    display: block;
+    width: 35px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: #007ACC;
+    transform: translateY(200%) rotate(-235deg);
+}
+.arrow_active {
+    display: block;
+}
+.close_close{
+    overflow: hidden;
+    animation: 0.1s displayClose ease;
+    visibility: hidden;
+}
+
+@keyframes close {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 5%;
+    }
+}
+@keyframes openAnimation {
+    0%{
+        width: 5%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes displayOpen {
+    0%{
+        height: 0%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes displayClose {
+    0%{
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        height: 0%;
+        visibility: hidden;
+        opacity: 0;
+    }
 }

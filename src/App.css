@@ -11,6 +11,17 @@
 
 body {
   background-image: url("./img/background/bubles.png"),
-                    linear-gradient(90deg, #007ACC 0%, #B7B7B7 100%);
+                    linear-gradient(90deg, #007ACC 0%, #ffffff 130%);
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 100px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100px;
+  background-color:#007acca1;
+}

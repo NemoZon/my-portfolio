@@ -1,0 +1,6 @@
+.skillList {
+    font-size: 20px;
+    grid-column: 1 / 2;
+    list-style-type: none;
+    padding: 0;
+}

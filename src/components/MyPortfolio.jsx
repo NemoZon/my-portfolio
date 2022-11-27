@@ -1,30 +1,53 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './MyPortfolio.module.css';
-import MyList from '../lists/MyList'
+import MySkills from './MySkills'
 
 
-const MyPortfolio = () => {
-    
+const MyPortfolio = (props) => {
+    const [active, setActive] = useState(true)
+    let portfolioClass = classes.portfolio;
+    let closeClass = " "
+    let closeClose = " "
+    let openClass = classes.arrow 
+    if (!active) {
+        portfolioClass += " "+classes.portfolio_close
+        closeClass += classes.display_close
+        closeClose += classes.close_close
+        openClass += " "+classes.arrow_active
+        console.log(closeClass);
+    } else {
+        portfolioClass += " "+classes.portfolio_open
+        closeClass += classes.display_open
+        // closeClose += classes.close_open
+    }
+
     const date = new Date();
     let age;
-
     if (date.getMonth() > 9 || (date.getMonth() == 9 && date.getDay() >= 22) ) {
         age = date.getFullYear() - 2001;
     } else {
         age = date.getFullYear() - 2001 - 1;
     }
+    const closePortfolio = ()=>{
+        active?setActive(false):setActive(true)
+        console.log("click");
+    }
 
     return (
-        <section className={classes.portfolio}>
+        <section className={portfolioClass} {...props}>
+            <div className={openClass} onClick={closePortfolio}>
+                <span className={classes.arrow__stick_1}></span>
+                <span className={classes.arrow__stick_2}></span>
+            </div>
 
-            <div className={classes.close}>
+            <div className={classes.close + closeClose} onClick={closePortfolio}>
                 <div className={classes.circle}>
                     <span className={classes.circle__stick_1}></span>
                     <span className={classes.circle__stick_2}></span>
                 </div>
             </div>
 
-            <div className={classes.portfolio__content}>
+            <div className={classes.portfolio__content + closeClass}>
                 <div className={classes.avatar}></div>
                 <div className={classes.me}>
                     
@@ -41,7 +64,7 @@ const MyPortfolio = () => {
                 </div>
                 <hr />
                 
-                <MyList></MyList>
+                <MySkills></MySkills>
 
                 <footer className={classes.address}>
                     <span className={classes.flag}><img src="./img/country/Country.png" alt="France"></img></span>
