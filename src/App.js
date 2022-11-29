@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import MyNav from './components/UI/navbar/MyNav';
 import MyPortfolio from './components/MyPortfolio';
+import MyMainPage from './components/MyMainPage';
 
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
     timeout = setTimeout(()=>{
       preloader.style.display = "none"
       setLoading(false)
-      console.log("hello");
     }, 2000)
   } else {
     clearTimeout(timeout)
@@ -25,7 +25,10 @@ function App() {
     !loading &&
     <div className='container'>
       <MyNav text="GB Studio_" logo="./img/logo/logo.svg" />
-      <MyPortfolio></MyPortfolio>
+      <div className='content'>
+        <MyPortfolio></MyPortfolio>
+        <MyMainPage></MyMainPage>
+      </div>
     </div>
   );
 }

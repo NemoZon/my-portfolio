@@ -1,0 +1,34 @@
+.main {
+    margin-left: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    height: 80vh;
+    border-radius: 20px;
+    padding: 11px 24px;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.point {
+    position: relative;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: #007ACC;
+}
+
+.point::before {
+    content: "From 2021";
+    text-align: center;
+    font-weight: 500;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    transform: translateX(-100%) translateY(-50%);
+}

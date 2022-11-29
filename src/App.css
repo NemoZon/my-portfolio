@@ -12,6 +12,7 @@
 body {
   background-image: url("./img/background/bubles.png"),
                     linear-gradient(90deg, #007ACC 0%, #ffffff 130%);
+  background-position: center ;
 }
 
 ::-webkit-scrollbar{
@@ -24,4 +25,10 @@ body {
 ::-webkit-scrollbar-thumb{
   border-radius: 100px;
   background-color:#007acca1;
+}
+
+.content {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
 }

@@ -1,0 +1,43 @@
+.btn {
+    /* position: relative; */
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    border: none;
+    background-color: transparent;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.span_disabled {
+    height: 2px;
+    background-color: #007acc;
+    animation: 0.3s btnDisabled ease-out;
+    animation-fill-mode: forwards;}
+.span_active {
+    height: 2px;
+    background-color: #007acc;
+    animation: 0.3s btnActive ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btnActive {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes btnDisabled {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
