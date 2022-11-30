@@ -19,12 +19,13 @@ body {
   width: 5px;
 }
 ::-webkit-scrollbar-track{
-  border-radius: 100px;
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb{
+  /* display: none; */
   border-radius: 100px;
-  background-color:#007acca1;
+  /* border: 1px solid #007acc; */
+  background-color:#007acc38;
 }
 
 .content {

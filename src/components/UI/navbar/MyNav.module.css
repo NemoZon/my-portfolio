@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
+    letter-spacing: -3px;
 }
 
 .logo {
@@ -39,7 +40,7 @@
     margin-left: 0.5em;
     font-family: 'OCR A Extended';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     display: flex;
     align-items: center;

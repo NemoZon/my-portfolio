@@ -1,0 +1,29 @@
+.container_point {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.before {
+    width: min-content;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.after {
+    text-align: left;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.point {
+    border-radius: 100%;
+    margin: 0 10px;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #007ACC;
+    font-style: 12px;
+    font-weight: 500;
+}

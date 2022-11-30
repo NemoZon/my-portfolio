@@ -7,6 +7,7 @@
     color: #000000;
     border: none;
     background-color: transparent;
+    font-family: 'Plus Jakarta Sans';
 }
 .container {
     display: flex;

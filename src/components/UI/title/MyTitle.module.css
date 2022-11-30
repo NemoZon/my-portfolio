@@ -1,0 +1,14 @@
+.title {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #007CAA;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    font-family: 'Plus Jakarta Sans';
+}
+.container {
+    width: 100%;
+    margin: 1em 0;
+}
