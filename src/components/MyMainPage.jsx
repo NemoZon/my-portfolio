@@ -5,6 +5,51 @@ import MyTitle from './UI/title/MyTitle'
 import MyTimePoint from './UI/timePoint/MyTimePoint'
 
 export default function MyMainPage(props) {
+
+    const timePoints = [
+        {
+            id: 1,
+            list: {
+                title: "Languages studied:",
+                li: [
+                    "PHP",
+                    "Python",
+                    "SQL",
+                    "HTML/CSS",
+                    "JS/React",
+                    "C++"
+                ]
+            },
+            before: "From 2021",
+            after: "Bachelor's degree in computer science option C++ at l'IUT Reims-Chalons-Charleville"
+        },
+        {
+            id: 2,
+            list: {
+                title: "Master:",
+                li: [
+                    "JS/ React"
+                ]
+            },
+            before: "From 2021",
+            after: "Online courses on Udemy"
+        },
+        {
+            id: 3,
+            list: {
+                title: "Master:",
+                li: [
+                    "HTML/CSS",
+                    "Gulp",
+                    "Git",
+                    "Sass/Scss" ,
+                    "BEM methodology"
+                ]
+            },
+            before: "2018 2019",
+            after: "Online courses on Udemy"
+        }
+    ]
     return (
         <section className={classes.main} {...props}>
             <div className={classes.scrollWrap}>
@@ -28,22 +73,16 @@ export default function MyMainPage(props) {
                 </div>
                 <section>
                     <MyTitle>Education</MyTitle>
-                    <MyTimePoint list={
-                        {
-                            title: "Languages studied:",
-                            li: [
-                                "PHP",
-                                "Python",
-                                "SQL",
-                                "HTML/CSS",
-                                "JS/React",
-                                "C++"
-                            ]
-                        }
-                    }
-                    before={"From 2021"}
-                    after={"Bachelor's degree in computer science option C++ at l'IUT Reims-Chalons-Charleville"}
-                    />
+                    <div className={classes.timePoints}>
+                        {timePoints.map((elem)=>
+                            <MyTimePoint 
+                                key={elem.id}
+                                list={elem.list}
+                                before={elem.before}
+                                after={elem.after}
+                            />
+                        )}
+                    </div>
                 </section>
             </div>
         </section>

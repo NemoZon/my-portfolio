@@ -1,14 +1,25 @@
 .container_point {
     display: flex;
-    align-items: center;
+    align-items: start;
     width: 100%;
 }
+
+.container {
+    position: relative;
+    padding: 0 20px;
+}
+
+.container_before {
+    display: flex;
+    align-items: start;
+}
+
 .before {
-    width: min-content;
+    width: 30px;
     text-align: center;
     font-family: Plus Jakarta Sans;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .after {
@@ -21,9 +32,43 @@
 .point {
     border-radius: 100%;
     margin: 0 10px;
+    margin-top: 6px;
     min-width: 10px;
     min-height: 10px;
     background-color: #007ACC;
-    font-style: 12px;
+    font-size: 12px;
     font-weight: 500;
+}
+
+.container_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    list-style-type: "\2714";
+}
+
+.container_list {
+    margin-top: 10px;
+    text-align: left;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.line {
+    position: absolute;
+    z-index: -1;
+    left: 64px;
+    top: 10px;
+    width: 2px;
+    height: 100%;
+    background-color: #007ACC;
+}
+
+@counter-style circled-alpha {
+    system: cyclic;
+    symbols: "\1F537" "\1F535" "\1F7E6";
+    suffix: " ";
 }
