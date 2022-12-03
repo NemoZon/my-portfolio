@@ -10,6 +10,9 @@
     border-radius: 20px;
     margin-top: 12px;
     padding: 0 2em 0 2em;
+    position: sticky;
+    top: 20px;
+    z-index: 999;
 }
 
 .navbar__logo {
@@ -58,4 +61,32 @@
 
 .link {
     position: relative;
+}
+
+@media (319px < width < 768px) {
+    .navbar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar__sm {
+        grid-column: 2;
+    }
+    .text {
+        font-size: 17px;
+    }
+    .socialMediaLogo {
+        max-width: 25px;
+        max-height: 25px;
+        border-radius: 8px;
+    }
+}
+
+@media (319px < width < 465px) {
+    .text {
+        display: none;
+    }
+    .socialMediaLogo {
+        max-width: 20px;
+        max-height: 20px;
+        border-radius: 6px;
+    }
 }

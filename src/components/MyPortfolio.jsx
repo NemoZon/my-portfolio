@@ -3,7 +3,7 @@ import classes from './MyPortfolio.module.css';
 import MySkills from './MySkills'
 
 
-const MyPortfolio = (props) => {
+const MyPortfolio = ({age, ...props}) => {
     const [active, setActive] = useState(true)
     let portfolioClass = classes.portfolio;
     let closeClass = " "
@@ -21,13 +21,6 @@ const MyPortfolio = (props) => {
         // closeClose += classes.close_open
     }
 
-    const date = new Date();
-    let age;
-    if (date.getMonth() > 9 || (date.getMonth() == 9 && date.getDay() >= 22) ) {
-        age = date.getFullYear() - 2001;
-    } else {
-        age = date.getFullYear() - 2001 - 1;
-    }
     const closePortfolio = ()=>{
         active?setActive(false):setActive(true)
         console.log("click");

@@ -22,14 +22,19 @@ body {
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb{
-  /* display: none; */
   border-radius: 100px;
-  /* border: 1px solid #007acc; */
   background-color:#007acc38;
 }
 
 .content {
+  position: relative;
   display: flex;
-  margin-top: 20px;
   justify-content: space-between;
+}
+
+@media (319px < width < 1024px) {
+  .content {
+    align-items: center;
+    flex-direction: column;
+  }
 }

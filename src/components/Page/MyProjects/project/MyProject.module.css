@@ -1,0 +1,93 @@
+.project {
+    width: 100%;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.container_img{
+    position: relative;
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container_data{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.data {
+    display: flex;
+    justify-content: start;
+    margin: 2px;
+}
+.data:first-child{
+    margin-top: 0;
+}
+.data:last-child{
+    margin-bottom: 0;
+}
+.title {
+    padding: 0px 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    margin-left: 10px;
+}
+
+.fade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 14px;
+    white-space: pre-line;
+    margin-bottom: 10px;
+}
+
+.fade:hover {
+    opacity: 1;
+    background-color: #00000042;
+}
+
+@media (319px < width < 1025px){
+    .container{
+        flex-direction: column;
+    }
+}

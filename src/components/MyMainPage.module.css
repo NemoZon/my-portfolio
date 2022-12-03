@@ -7,6 +7,7 @@
     height: 80vh;
     border-radius: 20px;
     padding-right: 20px;
+    margin-top: 20px;
 }
 
 .scrollWrap {
@@ -17,13 +18,25 @@
 }
 
 .description{
+    margin-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    white-space: pre-line;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+}
+.text {
+    margin-left: 25px;
 }
 
-.timePoints {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+@media (319px < width < 1024px) {
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .description {
+        flex-direction: column;
+    }
 }

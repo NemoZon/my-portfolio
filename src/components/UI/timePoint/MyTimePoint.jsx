@@ -1,13 +1,14 @@
 import React from 'react'
 import classes from './MyTimePoint.module.css'
+// import {Redirect} from "react-router-dom"
 
-export default function MyTimePoint({list, before, after, ...props}) {
+export default function MyTimePoint({list, before, after, link, ...props}) {
     return (
         <div className={classes.container} {...props}>
             <div className={classes.container_point}>
                 <div className={classes.container_before}>
                     <div className={classes.before}>{before}</div>
-                    <div className={classes.point}></div>
+                    <a className={classes.point} href={link} target="_blank"></a>
                 </div>
                 <div className={classes.line}></div>
 

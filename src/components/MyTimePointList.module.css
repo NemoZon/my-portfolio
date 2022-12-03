@@ -1,0 +1,27 @@
+.timePoints {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 180px;
+}
+@media (319px < width < 426px){
+    .img {
+        max-width: 100px;
+    }
+}
+@media (425px < width < 769px){
+    .img {
+        max-width: 140px;
+    }
+}
+@media (768px < width < 1025px) {
+    .img {
+        max-width: 160px;
+    }
+}

@@ -19,15 +19,22 @@ function App() {
   } else {
     clearTimeout(timeout)
   }
-
+  
+  const date = new Date()
+  let age;
+  if (date.getMonth() > 9 || (date.getMonth() == 9 && date.getDay() >= 22) ) {
+      age = date.getFullYear() - 2001;
+  } else {
+      age = date.getFullYear() - 2001 - 1;
+  }
 
   return (
     !loading &&
     <div className='container'>
       <MyNav text="GB Studio_" logo="./img/logo/logo.svg" />
       <div className='content'>
-        <MyPortfolio></MyPortfolio>
-        <MyMainPage></MyMainPage>
+        <MyPortfolio age={age}></MyPortfolio>
+        <MyMainPage age={age}></MyMainPage>
       </div>
     </div>
   );

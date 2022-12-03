@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import MyBtn from '../button/MyBtn'
 import classes from './MyNavBtn.module.css'
 
-export default function MyNavBtn({list, ...props}) {
+export default function MyNavBtn({list, changePage, ...props}) {
     const [activeList, setActiveList] = useState(list);
-    const change = (id)=>{
+    const change = (id, children)=>{
+        changePage(children)
         setActiveList(activeList.map((elem)=>{
-            console.log(id, elem.id)
             if (elem.id == id) {
                 return {...elem, active: true}
             } else {
