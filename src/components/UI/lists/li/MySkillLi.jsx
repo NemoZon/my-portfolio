@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import classes from './MySkillLi.module.css'
 import MyList from '../MyList'
 

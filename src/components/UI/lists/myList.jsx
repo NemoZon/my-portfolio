@@ -1,5 +1,5 @@
 import React from 'react'
-import MyLi from './li/MyLI'
+import MyLi from './li/MyLi'
 import classes from './MyList.module.css'
 
 export default function myList({items, ...props}) {
