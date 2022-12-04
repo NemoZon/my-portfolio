@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './MySkillLi.module.css'
-import MyList from '../../MyList'
+import MyList from './MyList'
 
 export default function MySkillLi({item, list, change, ...props}) {
     let classNames = classes.skillTitle
